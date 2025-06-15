@@ -7,7 +7,7 @@ def show_menu():
 
 
 def add_task(tasks):
-	task = input('タスクを入力してください')
+	task = input('タスクを入力してください: ')
 	tasks.append(task)
 	print('--> 追加しました！')
 
@@ -25,7 +25,7 @@ def delete_task(tasks):
 	show_tasks(tasks)
 	try:
 		num = int(input('削除するタスク番号を入力してください: '))
-		if 1 <= num <= len(tasks):
+	if 1 <= num <= len(tasks):
 			removed = tasks.pop(num - 1)
 			print(f'--> 「{removed}を削除しました。')
 		else:
